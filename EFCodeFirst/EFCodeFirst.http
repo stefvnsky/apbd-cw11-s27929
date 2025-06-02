@@ -11,10 +11,10 @@ Content-Type: application/json
     "lastName": "Nowak",
     "birthDate": "1990-01-01"
   },
-  "doctorId": 1,
+  "IdDoctor": 1,
   "medicaments": [
     {
-      "medicamentId": 1,
+      "IdMedicament": 1,
       "dose": 10,
       "description": "Stosować 2x dziennie"
     }
