@@ -1,6 +1,31 @@
-@EFCodeFirst_HostAddress = http://localhost:5173
+@EFCodeFirst_HostAddress = http://localhost:5000
 
-GET {{EFCodeFirst_HostAddress}}/weatherforecast/
+### Dodanie recepty
+
+POST {{EFCodeFirst_HostAddress}}/api/prescriptions
+Content-Type: application/json
+
+{
+  "patient": {
+    "firstName": "Jan",
+    "lastName": "Nowak",
+    "birthDate": "1990-01-01"
+  },
+  "doctorId": 1,
+  "medicaments": [
+    {
+      "medicamentId": 1,
+      "dose": 10,
+      "description": "Stosować 2x dziennie"
+    }
+  ],
+  "date": "2025-06-01",
+  "dueDate": "2025-06-10"
+}
+
+### Pobierz dane pacjenta z receptami
+
+GET {{EFCodeFirst_HostAddress}}/api/patients/1
 Accept: application/json
 
 ###
